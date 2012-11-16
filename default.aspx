@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="start.aspx.cs" Inherits="SLC_Classview_CSharp.WebForm1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="SLC_Classview_CSharp.WebForm1" %>
 
 <!DOCTYPE html>
 

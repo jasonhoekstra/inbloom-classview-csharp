@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Net;
+using System.Configuration;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
@@ -15,10 +16,10 @@ namespace SLC_Classview_CSharp
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            string clientId = "YOUR_CLIENT_ID";
-            string clientSecret = "YOUR_CLIENT_SECRET";
-            string redirectUri = "http://localhost:49611/start.aspx";
-
+            string clientId = ConfigurationManager.AppSettings["clientId"];
+            string clientSecret = ConfigurationManager.AppSettings["clientSecret"];
+            string redirectUri = ConfigurationManager.AppSettings["redirectUri"];
+            
             // We need an access token to call the API.  If we don't have one, let's get it, otherwise, redirect to main.aspx.
             if (Session["access_token"] == null)
             {
