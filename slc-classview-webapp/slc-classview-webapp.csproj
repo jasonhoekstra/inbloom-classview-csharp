@@ -141,7 +141,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>49180</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost/SLC-Classview-CSharp</IISUrl>
+          <IISUrl>http://localhost/slc-classview-webapp</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
