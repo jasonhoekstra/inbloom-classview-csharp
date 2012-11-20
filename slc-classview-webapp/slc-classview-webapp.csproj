@@ -121,7 +121,7 @@
     <Content Include="default.master" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="ClassLibrary1\SLCApiLibrary.csproj">
+    <ProjectReference Include="..\SLCApiLibrary\SLCApiLibrary.csproj">
       <Project>{5f6db91f-8206-488f-8ec8-5383343622ac}</Project>
       <Name>SLCApiLibrary</Name>
     </ProjectReference>
