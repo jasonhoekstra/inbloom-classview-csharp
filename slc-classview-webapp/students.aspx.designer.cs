@@ -13,15 +13,6 @@ namespace SLC_Classview_CSharp {
     public partial class students {
         
         /// <summary>
-        /// form1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
-        /// <summary>
         /// studentGridView control.
         /// </summary>
         /// <remarks>

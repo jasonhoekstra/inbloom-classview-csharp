@@ -1,19 +1,9 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="students.aspx.cs" Inherits="SLC_Classview_CSharp.students" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true"  MasterPageFile="~/default.master" CodeBehind="students.aspx.cs" Inherits="SLC_Classview_CSharp.students" %>
+    <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-    <div>
-    
-        <strong>Student GridView</strong><br />
-    
-    </div>
-        <asp:GridView ID="studentGridView" runat="server" AllowPaging="True" CellPadding="4" ForeColor="#333333" GridLines="None" AutoGenerateColumns="False">
+<h2>Students</h2>
+        <a href="sections.aspx">[Back to Sections]</a><br /><br />
+        <asp:GridView ID="studentGridView" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" AutoGenerateColumns="False">
             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
             <Columns>
                 <asp:TemplateField HeaderText="First Name">
@@ -40,8 +30,6 @@
             <SortedDescendingCellStyle BackColor="#FFFDF8" />
             <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
         </asp:GridView>
-    </form>
-    <p>
-        &nbsp;</p>
-</body>
-</html>
+&nbsp;&nbsp;&nbsp; 
+</asp:Content>
+

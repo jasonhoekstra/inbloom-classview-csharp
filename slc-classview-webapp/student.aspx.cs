@@ -42,5 +42,23 @@ namespace SLC_Classview_CSharp
 
             return student;
         }
+
+        //private JArray GetStudentCustomData() {
+        //    string apiEndPoint = string.Format("https://api.sandbox.slcedu.org/api/rest/v1/students/{0}/custom", Request.QueryString["id"]);
+        //    APIResponse request = APIClient.Request(apiEndPoint, Session["access_token"].ToString(), SLCApiLibrary.RequestType.JSONObject);
+
+        //    JArray student = null;
+
+        //    if (request.ResponseObject == null)
+        //        Response.Write(request.ErrorMessage);
+        //    else
+        //        student = request.ResponseObject;
+
+        //    return student;
+        //}
+
+        protected void saveButton_Click(object sender, EventArgs e) {
+
+        }
     }
 }
