@@ -33,10 +33,9 @@ namespace SLCApiLibrary
             try {
                 slcResponse = restClient.DownloadString(apiEndpoint);
 
-                if (slcResponse.Substring(0,1) == "[") {
-                     //studentJArray = String.Format("{{" + :{0}}}", slcResponse);
-                } else if (slcResponse.Substring(0,1) =="{") {
-                    //studentJArray = String.Format("{{arrayObject:[{0}]}}", slcResponse);
+                // If result doesn't come back as an array, let's make it an array for JArray
+                if (slcResponse.Substring(0,1) == "{") {
+                    slcResponse = String.Format("[{0}]", slcResponse);
                 }
 
 

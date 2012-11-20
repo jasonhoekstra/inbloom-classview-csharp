@@ -9,6 +9,8 @@ using System.Configuration;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
+using SLCApiLibrary;
+
 
 namespace SLC_Classview_CSharp
 {
@@ -54,6 +56,30 @@ namespace SLC_Classview_CSharp
                     if (access_token.Length == 38) {
                         Session.Add("access_token", access_token);
 
+                        string apiEndPoint = "https://api.sandbox.slcedu.org/api/rest/system/session/check";
+                        APIResponse request = APIClient.Request(apiEndPoint, Session["access_token"].ToString(), SLCApiLibrary.RequestType.JSONObject);
+
+                        if (request.ResponseObject != null) {
+                            JArray userInfo = request.ResponseObject;
+                            if (userInfo.Count == 1) {
+                                Session["user_FullName"] = userInfo[0]["full_name"].ToString();
+                                Session["user_SLIRoles"] = userInfo[0]["sliRoles"].ToString();
+                            }
+                        }
+
+                        apiEndPoint = "https://api.sandbox.slcedu.org/api/rest/v1/home";
+                        request = APIClient.Request(apiEndPoint, Session["access_token"].ToString(), SLCApiLibrary.RequestType.JSONObject);
+                        if (request.ResponseObject != null) {
+                            JArray userInfo = request.ResponseObject;
+
+                            foreach (JObject obj in (JArray) userInfo[0]["links"]) {
+                                if ((string)obj["rel"] == "self") {
+                                    string link = (string)obj["href"];
+                                    string id = link.Substring(link.Length - 43);
+                                    Session["user_ID"] = id;
+                                }
+                            }
+                        }
                         // Redirect to app main page.
                         Response.Redirect("sections.aspx");
                     }

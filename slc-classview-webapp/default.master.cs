@@ -9,6 +9,12 @@ namespace SLC_Classview_CSharp
 {
     public partial class default_master : System.Web.UI.MasterPage
     {
+        protected void Page_Init(object sender, EventArgs e) {
+            if (Session["access_token"] == null) {
+                Response.Redirect("default.aspx");
+            }
+        }
+
         protected void Page_Load(object sender, EventArgs e) {
 
         }

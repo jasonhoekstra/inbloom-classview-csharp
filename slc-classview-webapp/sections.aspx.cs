@@ -20,18 +20,14 @@ namespace SLC_Classview_CSharp
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Response.Write("here!");
-            // Do we have a valid access token in session?  If yes, let's make an API call.
-            if (Session["access_token"] != null)
-            {
-                string apiEndPoint = "https://api.sandbox.slcedu.org/api/rest/v1/sections";
+            //
+            string apiEndPoint = String.Format("https://api.sandbox.slcedu.org/api/rest/v1/teachers/{0}/teacherSectionAssociations/sections", Session["user_ID"].ToString());
 
-                APIResponse apiResponse = APIClient.Request(apiEndPoint, Session["access_token"].ToString(), RequestType.JSONObject);
-                APIResponse apiStringResponse = APIClient.Request(apiEndPoint, Session["access_token"].ToString(), RequestType.JSON);
+            APIResponse apiResponse = APIClient.Request(apiEndPoint, Session["access_token"].ToString(), RequestType.JSONObject);
+            APIResponse apiStringResponse = APIClient.Request(apiEndPoint, Session["access_token"].ToString(), RequestType.JSON);
 
-                sectionsGridView.DataSource = apiResponse.ResponseObject;
-                sectionsGridView.DataBind();
-            }
+            sectionsGridView.DataSource = apiResponse.ResponseObject;
+            sectionsGridView.DataBind();
         }
     }
 }
