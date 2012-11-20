@@ -1,0 +1,10 @@
+C:\Users\Demo\Documents\Visual Studio 2012\Projects\slc-classview-csharp\bin\SLC-Classview-CSharp.dll
+C:\Users\Demo\Documents\Visual Studio 2012\Projects\slc-classview-csharp\bin\SLC-Classview-CSharp.pdb
+C:\Users\Demo\Documents\Visual Studio 2012\Projects\slc-classview-csharp\bin\Newtonsoft.Json.dll
+C:\Users\Demo\Documents\Visual Studio 2012\Projects\slc-classview-csharp\bin\Newtonsoft.Json.pdb
+C:\Users\Demo\Documents\Visual Studio 2012\Projects\slc-classview-csharp\bin\Newtonsoft.Json.xml
+C:\Users\Demo\Documents\Visual Studio 2012\Projects\slc-classview-csharp\obj\Debug\SLC-Classview-CSharp.dll
+C:\Users\Demo\Documents\Visual Studio 2012\Projects\slc-classview-csharp\obj\Debug\SLC-Classview-CSharp.pdb
+C:\Users\Demo\Documents\Visual Studio 2012\Projects\slc-classview-csharp\obj\Debug\SLC-Classview-CSharp.csprojResolveAssemblyReference.cache
+C:\Users\Demo\Documents\Visual Studio 2012\Projects\slc-classview-csharp\bin\SLCApiLibrary.dll
+C:\Users\Demo\Documents\Visual Studio 2012\Projects\slc-classview-csharp\bin\SLCApiLibrary.pdb
